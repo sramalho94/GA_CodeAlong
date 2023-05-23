@@ -1,8 +1,8 @@
-import {View, TextInput, Pressable, Text, TouchableOpacity} from 'react-native';
+import {View, TextInput, Text, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {useState} from 'react';
 
-type Props = {onSubmit: Function};
+type Props = {onSubmit: (searchString: string) => Promise<void>};
 
 const SearchField = ({onSubmit}: Props) => {
   const [searchString, setSearchString] = useState<string>('');
